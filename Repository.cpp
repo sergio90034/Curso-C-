@@ -22,7 +22,7 @@ class Add{
             std::cout << "Clase Add" << std::endl;
         }
         virtual void add() = 0;
-        ~Add(){
+        virtual ~Add(){
             std::cout << "eliminamos clase Add" << std::endl;
         };
 };
@@ -33,7 +33,7 @@ class Get{
             std::cout << "Clase Get" << std::endl;
         }
         virtual void get() = 0;
-        ~Get(){
+        virtual ~Get(){
             std::cout << "Eliminamos clase Get" << std::endl;
         };
 };
@@ -44,7 +44,7 @@ class Update : virtual public Get{
             std::cout << "Clase Update" << std::endl;
         }
         virtual void update() = 0;
-        ~Update(){
+        virtual ~Update(){
             std::cout << "Eliminamos clase Update" << std::endl;
         };
 };
@@ -55,7 +55,7 @@ class Remove : virtual public Get{
             std::cout << "Clase Remove" << std::endl;
         }
         virtual void remove() = 0;
-        ~Remove(){
+        virtual ~Remove(){
             std::cout << "Eliminamos clase Remove" << std::endl;
         };
 };
@@ -82,7 +82,7 @@ class Repository : public Add, public Update, public Remove{
 
 int main()
 {
-    Update *update = new Repository();
+    Update *update = new Repository;
     update->get();
     update->update();
 
