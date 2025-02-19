@@ -1,4 +1,4 @@
-#include "Color.h"
+#include "../headers/Color.h"
 
     //Constructor
     Color::Color(byte red, byte green, byte blue){
@@ -37,5 +37,7 @@
 
     //toString
     string Color::toString() const{
-        return "RGB(" + to_string(red) + "," + to_string(green) + "," + to_string(blue) + ")";
+        return "RGB(" + std::to_string(static_cast<int>(red)) + ", " +
+        std::to_string(static_cast<int>(green)) + ", " +
+        std::to_string(static_cast<int>(blue)) + ")";
     }

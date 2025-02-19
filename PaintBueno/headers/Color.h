@@ -11,6 +11,7 @@ class Color{
         byte green;
         byte blue;
     public:
+        Color() = default;
         Color(byte red, byte green, byte blue);
         ~Color();
 

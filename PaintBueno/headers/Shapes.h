@@ -5,15 +5,19 @@
 
 using namespace std;
 
+
 class Shape : public Point, public Color{
     private:
         Point start;
         Point end;
         Color color;
     protected:
-        Shape(int x, int y, byte red, byte green, byte blue);
+        
+        Shape(Point start, Point end, Color color);
         ~Shape();
     public:
+        //Constructor para hacer pruebas
+        Shape() = default;
         // Getters
         Point getStart() const;
         Point getEnd() const;

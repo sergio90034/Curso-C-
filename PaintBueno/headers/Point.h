@@ -9,6 +9,7 @@ class Point{
         int x;
         int y;
     public:
+        Point() = default;
         Point(int x, int y);
         ~Point();
         int getX() const;
