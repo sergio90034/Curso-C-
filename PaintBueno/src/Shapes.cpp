@@ -1,10 +1,7 @@
 #include "../headers/Shapes.h"
 
-    Shape::Shape(Point start, Point end, Color color){
-        this->start = start;
-        this->end = end;
-        this->color = color;
-    }
+    Shape::Shape(Point start, Point end, Color color) : start(start), end(end), color(color) {}
+
     Shape::~Shape(){
         cout << "Clase Shape eliminada" << endl;
     }
@@ -31,11 +28,6 @@
     }
 
     //To string
-    string Shape::toString() const{
+    std::string Shape::toString() const{
         return "Shape: " + start.toString() + end.toString() + "with color: " + color.toString();
     }
-int main()
-{
-
-    return 0;
-}

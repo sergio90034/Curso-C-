@@ -1,14 +1,11 @@
 #include "../headers/Color.h"
 
     //Constructor
-    Color::Color(byte red, byte green, byte blue){
-        this->red = red;
-        this->green = green;
-        this->blue = blue;
-    }
+    Color::Color(byte red, byte green, byte blue) : red(red), green(green), blue(blue){}
+   
     //Desctructor
     Color::~Color(){
-        cout << "Clase Color eliminada" << endl;
+       std::cout << "Clase Color eliminada" << std::endl;
     }
 
     //getters
@@ -36,7 +33,7 @@
     }
 
     //toString
-    string Color::toString() const{
+    std::string Color::toString() const{
         return "RGB(" + std::to_string(static_cast<int>(red)) + ", " +
         std::to_string(static_cast<int>(green)) + ", " +
         std::to_string(static_cast<int>(blue)) + ")";

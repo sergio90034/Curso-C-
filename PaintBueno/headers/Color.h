@@ -1,17 +1,17 @@
-#pragma once
+#ifndef COLOR_H
+#define COLOR_H
+
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 class Color{
     private:
-        using byte = unsigned char; //byte es un alias para ek tipo de dato unsigned byte
+        using byte = unsigned char; //byte es un alias para el tipo de dato unsigned char
         byte red;
         byte green;
         byte blue;
     public:
-        Color() = default;
+        Color() = default; // Por qué? 
         Color(byte red, byte green, byte blue);
         ~Color();
 
@@ -26,7 +26,8 @@ class Color{
         void setBlue(byte blue);
 
         //toString
-        string toString() const;
+        std::string toString() const;
         
-
 };
+
+#endif /* COLOR_H */
