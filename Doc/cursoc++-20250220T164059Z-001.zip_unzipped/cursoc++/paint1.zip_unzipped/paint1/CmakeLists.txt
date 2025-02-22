@@ -1,0 +1,46 @@
+cmake_minimum_required(VERSION 3.10)
+project(Paint)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Archivos fuente
+set(SOURCES
+    App.cpp
+    Canvas.cpp
+    Circle.cpp
+    Color.cpp
+    CommandBase.cpp
+    CommandCreate.cpp
+    CommandList.cpp
+    CommandMove.cpp
+    CommandRemove.cpp
+    Paint.cpp
+    Point.cpp
+    Rectangle.cpp
+    Shape.cpp
+    Toolbar.cpp
+    UUID.cpp
+    Util.cpp
+)
+
+# Archivos de encabezado
+set(HEADERS
+    App.h
+    Canvas.h
+    Circle.h
+    Color.h
+    CommandBase.h
+    CommandCreate.h
+    CommandList.h
+    CommandMove.h
+    CommandRemove.h    
+    Point.h
+    Rectangle.h
+    Shape.h
+    Toolbar.h
+    UUID.h
+    Util.h
+)
+
+# Crear el ejecutable
+add_executable(Paint ${SOURCES} ${HEADERS})
